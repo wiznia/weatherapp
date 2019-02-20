@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  background: linear-gradient(45deg, #03A9F4, #f4433685) fixed; }
+
+.weatherapp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 1.875rem; }
+
+.weatherapp__title {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 1.875rem; }
+
+.weatherapp__current {
+  flex-basis: 100%; }
+
+.weatherapp__current .day {
+  padding: 1.875rem 1rem; }
+
+.weatherapp__current .day__title, .weatherapp__current .day__date {
+  font-size: 1.5625rem; }
+
+.weatherapp__current .day__icon {
+  margin: 1.25rem 0; }
+
+.weatherapp__current .day__temperature {
+  font-size: 1.875rem;
+  margin-bottom: .625rem; }
+
+.weatherapp__current .day__apparent-temperature {
+  font-size: 1.125rem;
+  margin-bottom: .4375rem; }
+
+.weatherapp__current .day__description {
+  font-size: 1rem; }
+
+.day {
+  border: 1px solid rgba(156, 39, 176, 0.2);
+  border-radius: 4px;
+  background: linear-gradient(10deg, #9c27b0, #ffeb3b) fixed;
+  padding: .875rem;
+  margin: .3125rem;
+  flex: 1;
+  text-align: center; }
+
+.day__title {
+  font-weight: 900; }
+
+.day__description {
+  font-size: .875rem;
+  margin: auto; }
+
+.day__bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+  width: 10.625rem;
+  margin: 1.25rem auto 0; }
+
+.day__bottom-info svg {
+  margin-right: .25rem; }
+
+.day__icon {
+  margin: 1rem 0; }
+
+.day__icon, .day__date, .day__title {
+  flex-basis: 100%; }
+
+.weatherapp__week {
+  display: flex;
+  flex-wrap: wrap; }
+
+.weatherapp__week .day {
+  display: flex;
+  flex-wrap: wrap; }
