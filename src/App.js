@@ -111,7 +111,7 @@ class App extends React.Component {
         {
           error &&
           <div>
-            {error.message || error.toString} {` (${error.status} ${error.statusText})`}
+            {error}
           </div>
         }
         { this.state.previousMonthActive ? (

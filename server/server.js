@@ -14,15 +14,6 @@ app.use(bodyParser.json());
 const key = process.env.REACT_APP_API_KEY;
 const url = `https://api.darksky.net/forecast/${key}/`;
 
-app.configure('production', => {
-  app.use((req, res, next) => {
-    if (req.header('x-forwarded-proto') !== 'https')
-      res.redirect(`https://${req.header('host')}${req.url}`)
-    else
-      next()
-  })
-})
-
 app.get('/api/darksky', (req, res) => {
   try {
     const fullURL = `${url}${req.query.latitude},${req.query.longitude}?units=si`;
