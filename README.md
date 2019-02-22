@@ -9,4 +9,4 @@ You can check observed, today's and future forecast based on browser's geolocati
 3. `npm install`
 4. `cd server && npm install`
 5. `npm run server`
-6. `cd .. && npm start`
+6. Open another terminal on the root of the repository and `npm start`
