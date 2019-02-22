@@ -18,6 +18,15 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    /*global google*/
+    const autocomplete = new google.maps.places.Autocomplete(document.getElementById('address'), {types: ['geocode']});
+    autocomplete.addListener('place_changed', () => {
+      const lat = autocomplete.getPlace().geometry.location.lat();
+      const lng = autocomplete.getPlace().geometry.location.lng();
+      
+      this.queryDarkSky(lat, lng);
+    });
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -108,6 +117,7 @@ class App extends React.Component {
     return (
       <main className="weatherapp">
         <h1 className="weatherapp__title">Weather App</h1>
+        <input type="text" className="weatherapp__input" id="address" name="address" placeholder="Enter your location" />
         {
           error &&
           <div>
