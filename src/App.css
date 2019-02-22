@@ -8,13 +8,22 @@ body {
   color: #fff;
   background: linear-gradient(45deg, #03A9F4, #f4433685) fixed; }
 
+.error {
+  flex-basis: 100%;
+  color: #c11;
+  text-align: center; }
+
 .weatherapp {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 1.875rem 5rem; }
+  padding: 1.875rem 2.5rem; }
+
+@media screen and (min-width: 768px) {
+  .weatherapp {
+    padding: 1.875rem 5rem; } }
 
 .weatherapp__input {
   background: none;
@@ -23,6 +32,7 @@ body {
   font-size: 1.375rem;
   color: #fff;
   width: 20rem;
+  color: #fff;
   padding-bottom: .4375rem;
   margin: 1.875rem 0; }
 
@@ -59,11 +69,21 @@ body {
   border: 0;
   position: fixed;
   top: 50%;
-  left: 1.25rem; }
+  left: .4375rem; }
+
+@media screen and (min-width: 768px) {
+  .weatherapp__previous, .weatherapp__next {
+    left: 1.25rem; }
+  .weatherapp__previous svg, .weatherapp__next svg {
+    width: 1.875rem; } }
 
 .weatherapp__next {
   left: auto;
-  right: 1.25rem; }
+  right: .4375rem; }
+
+@media screen and (min-width: 768px) {
+  .weatherapp__next {
+    right: 1.25rem; } }
 
 .weatherapp__current {
   flex-basis: 100%; }

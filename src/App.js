@@ -35,7 +35,7 @@ class App extends React.Component {
         
         () => {
           this.setState({
-            error: 'Geolocation failed'
+            error: 'Geolocation failed. You can use the input above to enter your city/country'
           });
         }
       );
@@ -120,14 +120,14 @@ class App extends React.Component {
         <input type="text" className="weatherapp__input" id="address" name="address" placeholder="Enter your location" />
         {
           error &&
-          <div>
+          <div className="error">
             {error}
           </div>
         }
         { this.state.previousMonthActive ? (
           <div className="weatherapp__week">
             <Week week={this.state.previousMonth} />
-            <button className="weatherapp__next" onClick={this.loadCurrentDay}><svg width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.9 23.9"><path fill="#fff" d="M14.2 10.2L4.7.7c-.9-.9-2.3-.9-3.2 0l-.8.8c-.9.9-.9 2.3 0 3.2L8 12 .7 19.3c-.9.9-.9 2.3 0 3.2l.8.8c.9.9 2.3.9 3.2 0l9.6-9.6c.5-.5.7-1.1.6-1.7 0-.7-.2-1.3-.7-1.8z"/></svg></button>
+            <button className="weatherapp__next" onClick={this.loadCurrentDay}><svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.9 23.9"><path fill="#fff" d="M14.2 10.2L4.7.7c-.9-.9-2.3-.9-3.2 0l-.8.8c-.9.9-.9 2.3 0 3.2L8 12 .7 19.3c-.9.9-.9 2.3 0 3.2l.8.8c.9.9 2.3.9 3.2 0l9.6-9.6c.5-.5.7-1.1.6-1.7 0-.7-.2-1.3-.7-1.8z"/></svg></button>
           </div>
         ) : (
             this.state.week.length === 0 ? (
@@ -138,7 +138,7 @@ class App extends React.Component {
               </div>
             ) : (
             <React.Fragment>
-              <button className="weatherapp__previous" onClick={this.loadPreviousMonth}><svg width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.9 23.9"><path fill="#fff" d="M.6 13.7l9.6 9.6c.9.9 2.3.9 3.2 0l.8-.8c.9-.9.9-2.3 0-3.2L6.9 12l7.3-7.3c.9-.9.9-2.3 0-3.2l-.8-.8c-.9-.9-2.3-.9-3.2 0L.6 10.3c-.4.4-.6 1-.6 1.7 0 .6.2 1.2.6 1.7z"/></svg></button>
+              <button className="weatherapp__previous" onClick={this.loadPreviousMonth}><svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.9 23.9"><path fill="#fff" d="M.6 13.7l9.6 9.6c.9.9 2.3.9 3.2 0l.8-.8c.9-.9.9-2.3 0-3.2L6.9 12l7.3-7.3c.9-.9.9-2.3 0-3.2l-.8-.8c-.9-.9-2.3-.9-3.2 0L.6 10.3c-.4.4-.6 1-.6 1.7 0 .6.2 1.2.6 1.7z"/></svg></button>
               <div className="weatherapp__current">
                 <Day current={this.state.current} isCurrent={true} />
               </div>
