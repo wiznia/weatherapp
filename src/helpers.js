@@ -28,7 +28,7 @@ export function darkSky(url, onRequestSuccess, onRequestFailure) {
           } catch (ex) {
             error.message = text;
           }
-            onRequestFailure(error);
+          onRequestFailure(error);
         });
       }
     });

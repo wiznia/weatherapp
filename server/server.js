@@ -4,7 +4,7 @@ require('es6-promise').polyfill();
 require('isomorphic-fetch');
 const http = require('http');
 const dotenv = require('dotenv');
-const app = express(); 
+const app = express();
 const server = http.createServer(app);
 
 dotenv.config();
