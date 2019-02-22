@@ -1,6 +1,6 @@
 A weather app using [DarkSky API](https://darksky.net/dev/docs#overview)
 
-You can check observed, today's and future forecast based on browser's geolocation.
+You can check observed, today's and future forecast based on browser's geolocation or by entering a specific location via Google Places API.
 
 # Installation
 
