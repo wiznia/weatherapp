@@ -12,12 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const key = process.env.REACT_APP_API_KEY;
-const proxy = 'http://cors.io/?';
 const url = `https://api.darksky.net/forecast/${key}/`;
 
 app.get('/api/darksky', (req, res) => {
   try {
-    const fullURL = `${proxy}${url}${req.query.latitude},${req.query.longitude}?units=si`;
+    const fullURL = `${url}${req.query.latitude},${req.query.longitude}?units=si`;
 
     fetch(fullURL)
       .then(response => {
